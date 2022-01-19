@@ -87,6 +87,7 @@ main{
     background:rgb(138, 213, 243);
     position:relative;
     z-index:-1;
+    margin-bottom: 50px;
 }
 
 /*START*/
@@ -161,18 +162,21 @@ main{
 
 /*CANNON*/
 .cannon-rotation{
-    transform-origin: 25% 100%;
+    transform-origin: 30% 50%;
     animation: rotCan 2s infinite linear alternate;
 }
 .cannon{  
-    display:flex;
+    /* display:flex; */
     position:absolute;
-    left:25px;
-    bottom:40px;
-    height:60px;
+    left:15px;
+    bottom:35px;
+    width: 200px;
 }
 .cannon-image{
     z-index: 3; 
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
 }
 .cannon-stand{ 
     z-index: 4;
@@ -191,7 +195,7 @@ main{
     position:absolute;
     height:30px;
     right:-30px;
-    bottom:12px;
+    bottom: 25px;
     z-index:-1;
 }
 .dave img{
