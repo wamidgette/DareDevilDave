@@ -1,0 +1,261 @@
+/*Google fonts import*/
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+/*-----------------------------------------------------------*/
+/*LEGEND
+    GENERAL
+    HEADER
+    MAIN CONTENT
+    /*TIMER COUNTDOWN*/
+    /*SCORE KEEPER*/
+    /*INSTRUCTIONS*/
+    /*CANNON*/
+    /*DAVE*/
+    /*HOOP*/
+    /*START*/
+    /*FOOTER*/
+    /*KEYFRAME ANIMATIONS*/
+/*-----------------------------------------------------------*/
+
+/*GENERAL*/
+html{
+    box-sizing:border-box;
+    font-family:'open Sans', sans-serif;
+    font-family:'Shadows Into Light', cursive;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    height:100vh;
+    margin:0;
+    background-color:#383838;
+}
+
+h1, h2, h3{
+    font-family: 'Permanent Marker', cursive;
+}
+/*HEADER*/
+header{
+    position:relative;
+    text-align: center;
+    background:#383838;
+    display: flex;
+    flex-direction: column;
+}
+
+header>*{
+    display:inline-block;
+    color:white;
+}
+
+header a{
+    align-self: flex-start;
+    text-decoration: none;
+    margin: 20px 0 0 5%;
+}
+
+header a:hover{
+    color:red;
+}
+
+header h1{
+    font-size: 40px;
+    margin-top: 10px;
+    height:50px;
+}
+
+.hidden{
+    position:absolute;
+    left:-10000px;
+}
+
+/****MAIN****/
+
+main{
+    position:relative;
+    width: 900px;
+    height: 500px;
+    min-height: 400px;
+    margin:auto;
+    overflow: hidden;
+    box-shadow:1px 1px 10px black;
+    border-radius:20px;
+}
+.animation-stage{
+    height:100%;
+    width:100%;
+    background:rgb(138, 213, 243);
+    position:relative;
+    z-index:-1;
+}
+
+/*START*/
+
+/*The red curtain and button at the beginning */
+.start-box{
+    position:absolute;
+    padding:50px;
+    top:0;
+    height:100%;
+    width:100%;
+    background:#a55b5b;
+    text-align: center;
+    transition: transform 3s ease 1s;
+}
+.slide-down{
+    transform: translate(0, 110%);
+}
+.start-button{
+    width: max-content;
+    cursor: pointer;
+    padding: 20px 30px;
+    border-radius:10px;
+    background:rgb(2, 124, 2);
+    font-size:1.5rem;
+    box-shadow:0 10px #073a20;
+    margin-bottom:50px;
+    transition: transform 1s, box-shadow 1s
+}
+.button-animation{
+    box-shadow:0 0 !important;
+    transform: translate(0, 10px);
+}
+.message{
+    margin: auto;
+    width:300px;
+    border:2px solid black;
+    font-size:20px;
+    font-weight:bold;
+    box-shadow: 0px 0px 5px;
+    border-radius:20px;
+    background:#fff;
+    padding: 20px;
+}
+
+/*TIMER COUNTDOWN*/
+/*SCORE KEEPER*/
+.score-box{
+    display: flex;
+    justify-content: space-between;
+}
+.display-info{
+    text-align: center;
+    display:inline-block;
+    width:250px;
+    height:40px;
+    background: yellow;
+    color:red;
+    font-size:25px;
+    font-weight:bold;
+    border-bottom-right-radius: 40px ;
+    border-top-left-radius: 20px ;
+    border-bottom-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+}
+.display-info:nth-child(2){
+    border-bottom-right-radius: 10px ;
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 40px ;
+    border-top-right-radius: 20px ;
+}
+
+/*CANNON*/
+.cannon-rotation{
+    transform-origin: 25% 100%;
+    animation: rotCan 2s infinite linear alternate;
+}
+.cannon{  
+    display:flex;
+    position:absolute;
+    left:25px;
+    bottom:40px;
+    height:60px;
+}
+.cannon-image{
+    z-index: 3; 
+}
+.cannon-stand{ 
+    z-index: 4;
+    height:80px;
+    position:absolute;
+    bottom:0;
+    left:20px;
+}
+/*DAVE*/
+.dave-launch-animation{
+    animation: rotDave 2s 1 linear 0.5s;
+    transform-origin: 50% 1200px;
+    animation-play-state: running;
+}
+.dave{
+    position:absolute;
+    height:30px;
+    right:-30px;
+    bottom:12px;
+    z-index:-1;
+}
+.dave img{
+    width:70px;
+}
+
+/*HOOP*/
+.goal{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    /* needs to always be 2:1 height:width */
+    height: 20%;
+    right: 75px;
+    top:40%;
+    width: max-content;
+}
+/* Pole for the hoop */
+.goal::after{
+    content: "";
+    position: absolute;
+    background: #0f7c44;
+    width: 3px;
+    height: 10000px;
+    right: 50%;
+    top:100%;
+    text-align: center;
+}
+.hoop{
+    height: 100%;
+    z-index: -1;
+}
+/* right half of hoop */
+.hoop:nth-child(2){
+    z-index: 1;
+    left: 50px;
+}
+
+/*Time up message that is not displayed until the curtain goes back up*/
+.time-up{
+    position:absolute;
+    font-size:35px;
+    font-weight:bold;
+    display:none;
+    margin:auto;
+    top:45%;
+}
+
+/*KEYFRAME ANIMATIONS*/
+/*Keyframe animation - ROTATE THE CANNON*/
+@keyframes rotCan{
+    0%,100%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(-50deg);
+    }
+}
+/*Keyframe animation - ROTATE DAVE*/
+@keyframes rotDave{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(75deg);
+    }
+}

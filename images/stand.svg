@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="914.983" height="424" viewBox="0 0 914.983 424">
+  <g id="Group_3" data-name="Group 3" transform="translate(-471 -511)">
+    <g id="Group_2" data-name="Group 2" transform="translate(-277 -91)">
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="28" cy="28" r="28" transform="translate(932 786)" fill="#61480e"/>
+      <g id="Group_1" data-name="Group 1" transform="translate(340 62)">
+        <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(408 540)" fill="rgba(255,255,255,0)" stroke="#61480e" stroke-width="15">
+          <circle cx="212" cy="212" r="212" stroke="none"/>
+          <circle cx="212" cy="212" r="204.5" fill="none"/>
+        </g>
+        <line id="Line_1" data-name="Line 1" x1="141" y2="141" transform="translate(479.5 752.5)" fill="none" stroke="#61480e" stroke-width="8"/>
+        <line id="Line_2" data-name="Line 2" x1="141" y2="141" transform="translate(620.5 612.5)" fill="none" stroke="#61480e" stroke-width="8"/>
+        <line id="Line_3" data-name="Line 3" x1="140" y1="140" transform="translate(620.5 753.5)" fill="none" stroke="#61480e" stroke-width="8"/>
+        <line id="Line_4" data-name="Line 4" x1="140" y1="140" transform="translate(480.5 612.5)" fill="none" stroke="#61480e" stroke-width="8"/>
+      </g>
+    </g>
+    <path id="Path_7" data-name="Path 7" d="M626.387,694.389V682.334s169.25-24.521,327.808-37.681c85.026-7.057,166.969-7.384,218.118,8.263,146.559,44.832,143.654,236.975,143.654,236.975" transform="translate(55 33.191)" fill="none" stroke="#61480e" stroke-width="30"/>
+  </g>
+</svg>

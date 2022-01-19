@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Daredevil Dave</title>
+        <meta charset="utf-8"/>
+        <link type="text/css" rel="stylesheet" href="css/global.css"/>
+        <script type="text/javascript" src="jquery-3.5.1/jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://kit.fontawesome.com/d427077c73.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <a href="../"><i class="far fa-arrow-alt-circle-left"></i>Back to main page</a>
+            <h1 id=mainTitle>Daredevil Dave</h1>
+        </header>
+        <main> 
+            <div class="animation-stage">
+                <div class="score-box">
+                    <div class="display-info">Time Left:<span id="timer">60</span>s</div>
+                    <div class="display-info">Your Score:<span id="score">0</span></div>
+                </div>
+                <img alt="cannon stand" class="cannon-stand" src="images/stand.svg"/>
+                <div class="cannon">
+                    <img id="cannonImage" alt="cannon" src="images/cannon.svg">
+                    <img class="dave" id="dave" alt="dave" src="images/dave.svg">
+                </div>
+                <div class="goal">
+                    <img alt="hoop" class="hoop" src="images/left-half-hoop.svg"/>
+                    <img alt="hoop" class="hoop" src="images/right-half-hoop.svg"/>
+                </div>
+            </div>
+            <div class="start-box">
+                <button type="button" class="start-button">START</button>
+                <div class=message>Time the cannon to SHOOT DAVE THROUGH THE HOOP Using the SPACE BAR. You have 1 minute to sink as many shots as you can!</div>
+            </div>
+        </main>
+    </body>
+</html>
